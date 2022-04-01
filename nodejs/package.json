@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "An example Kafka producer codebase",
+  "main": "dist/producer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node dist/producer.js",
+    "dev": "ts-node src/producer.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Evan Shortiss <evanshortiss@gmail.com> (https://evanshortiss.com)",
+  "license": "MIT",
+  "dependencies": {
+    "env-var": "^7.1.1",
+    "kafkajs": "^1.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.26",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": ">=16.3"
+  }
+}
