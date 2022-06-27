@@ -1,4 +1,4 @@
-import { KafkaConfig, Kafka, Producer } from 'kafkajs'
+import { KafkaConfig, Kafka } from 'kafkajs'
 import { get } from 'env-var'
 import { songs } from './songs'
 
