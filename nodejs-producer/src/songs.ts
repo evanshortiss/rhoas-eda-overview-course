@@ -73,4 +73,64 @@ export const songs: Message[] = [
     key: 'Taylor Swift',
     value: 'Blank Space',
   },
+  {
+    key: 'Kygo',
+    value: 'Higher Love'
+  },
+  {
+    key: 'Kygo',
+    value: 'Higher Love'
+  },
+  {
+    key: 'Blur',
+    value: 'Parklife'
+  },
+  {
+    key: 'Oasis',
+    value: 'Supersonic'
+  },
+  {
+    key: 'Stephen Walking',
+    value: 'Glide'
+  },
+  {
+    key: 'Tristam',
+    value: 'Bone Dry'
+  },
+  {
+    key: 'Low Roar',
+    value: 'Don\'t Be so Serious'
+  },
+  {
+    key: 'Low Roar',
+    value: 'Easy Way Out'
+  },
+  {
+    key: 'Vulfpeck',
+    value: 'Conscious Club'
+  },
+  {
+    key: 'Vulfpeck',
+    value: '1612'
+  },
+  {
+    key: 'CHVRCHES',
+    value: 'Here With Me'
+  },
+  {
+    key: 'CHVRCHES',
+    value: 'The Mother We Share'
+  },
+  {
+    key: 'CHVRCHES',
+    value: 'Here With Me'
+  },
+  {
+    key: 'CHVRCHES',
+    value: 'The Mother We Share'
+  },
+  {
+    key: 'HAIM',
+    value: 'The Steps'
+  }
 ]
