@@ -21,14 +21,3 @@ mvn compile exec:java \
 -Dlog4j.configurationFile=log4j2.properties \
 -Dexec.mainClass="com.rhoas.kafka.Consumer"
 ```
-
-Optionally, define the variables as part of the command:
-
-```bash
-BOOTSTRAP_SERVER=my.kafka-boostrap.com:443 \
-CLIENT_ID=saslusername \
-CLIENT_ID=saslpassword \
-mvn compile exec:java \
--Dlog4j.configurationFile=log4j2.properties \
--Dexec.mainClass="com.rhoas.kafka.Consumer"
-```
