@@ -22,11 +22,12 @@ public class MyReactiveMessagingApplication {
         IncomingKafkaRecordMetadata<String, String> md = KafkaMetadataUtil.readIncomingKafkaMetadata(message).get();
         
         System.out.printf(
-            "\nReceived song \"%s\" by \"%s\" from the %s topic [Partition: %d]",
+            "\nReceived song \"%s\" by \"%s\" from the %s topic [Partition: %d, Offset: %d]",
             md.getRecord().value(),
             md.getKey(),
             md.getTopic(),
-            md.getPartition()
+            md.getPartition(),
+            md.getOffset()
         );
 
         return message.ack();
