@@ -13,6 +13,7 @@
   "author": "Evan Shortiss <evanshortiss@gmail.com> (https://evanshortiss.com)",
   "license": "MIT",
   "dependencies": {
+    "barelog": "^0.2.0",
     "env-var": "^7.1.1",
     "kafkajs": "^1.16.0"
   },
