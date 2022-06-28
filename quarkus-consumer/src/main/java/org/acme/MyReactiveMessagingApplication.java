@@ -1,12 +1,11 @@
 package org.acme;
 
-import io.quarkus.runtime.StartupEvent;
+import io.smallrye.reactive.messaging.kafka.api.IncomingKafkaRecordMetadata;
+import io.smallrye.reactive.messaging.kafka.api.KafkaMetadataUtil;
 import org.eclipse.microprofile.reactive.messaging.*;
-
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
 import javax.inject.Inject;
-import java.util.stream.Stream;
+import java.util.concurrent.CompletionStage;
 
 @ApplicationScoped
 public class MyReactiveMessagingApplication {
@@ -19,7 +18,17 @@ public class MyReactiveMessagingApplication {
     }
 
     @Incoming("songs")
-    public void printSong(String message) {
-        System.out.println(message);
+    public CompletionStage<Void> printSong(Message<String> message) {
+        IncomingKafkaRecordMetadata<String, String> md = KafkaMetadataUtil.readIncomingKafkaMetadata(message).get();
+        
+        System.out.printf(
+            "\nReceived song \"%s\" by \"%s\" from the %s topic [Partition: %d]",
+            md.getRecord().value(),
+            md.getKey(),
+            md.getTopic(),
+            md.getPartition()
+        );
+
+        return message.ack();
     }
 }
