@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "Quote",
+  "namespace": "org.acme.kafka.quarkus",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "price",
+      "type": "int"
+    }
+  ]
+}
